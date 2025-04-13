@@ -18,3 +18,4 @@ SELECT MAX(num) AS num FROM (SELECT num FROM MyNumbers GROUP BY num HAVING COUNT
 # ✅ 答案：它是子查询的别名（alias），是必须要写的！
 #  在 SQL 中，任何子查询都必须有别名，否则语法错误！
 
+#SELECT MAX(num) AS num  FROM MyNumbers WHERE num IN (SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(*) = 1);
